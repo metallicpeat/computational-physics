@@ -1,0 +1,56 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=1.75cm,right=1.75cm,marginparwidth=1.75cm]{geometry}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{blindtext}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{xcolor}
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\usepackage{gensymb}
+\usepackage{tabularx}
+
+
+\title{Computational HW 1}
+\author{Michael Bibbs}
+
+\begin{document}
+\maketitle
+\section*{Radioactive Decay}
+\section{Introduction}
+Consider a radioactive decay problem involving two types of nuclei, $A$ and $B$, with populations $N_A(t)$ and $N_B(t)$. Suppose that type $A$ nuclei decay to form type $B$ nuclei, which then also decay, according to the differential equations
+\begin{equation}
+\frac{dN_A}{dt}=-\frac{N_A}{\tau_A}
+\end{equation}
+\begin{equation}
+	\frac{dN_B}{dt}=\frac{N_A}{\tau_A}-\frac{N_B}{\tau_B}
+\end{equation}
+Here, we assume that type A nuclei are naturally occurring, and type B are not. This paper focuses on determing the age of an object by measuring the amount of type A and B nuclei within the object. We then discuss the accuracy of the age based on the ratio of measured nuclei $\dfrac{N_B}{N_A}$
+\section{Methods}
+The original Euler method is used. The form
+\[f(t+\Delta t)=f(t)+\frac{df}{dt}(t)\Delta t\]
+\indent is adapted into our coupled differential equations. We obtain the iteration relations
+\begin{equation}
+	N_A(t+\Delta t) = N_B(t) -\frac{N_A(t)}{\tau_A}\Delta t
+\end{equation}
+\begin{equation}
+	N_B(t+\Delta t) = N_B(t)
+\end{equation}
+The following parameters were initialized as such:
+\begin{enumerate}
+	\item $N_A(0) = 1$~~~~~{\textit{\footnotesize (Note: this represents 100\% of the starting nuclei being type A.)}}
+	\item $N_B(0) = 0$
+	\item $\Delta t=0.1$
+	\item Type A Decay Constant $\tau_A$
+	\item Type B Decay Constant $\tau_B$ 
+	\item Scaled time $T = t/\tau_A$
+\end{enumerate}
+Different decay ratios $\gamma = \tau_A/\tau/B$ were tested. 
+\end{document}
