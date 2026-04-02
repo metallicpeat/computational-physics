@@ -84,24 +84,44 @@
 	\end{equation}
 	\begin{equation}
 	N_B(t)=\dfrac{\tau_B}{\tau_A-\tau_B}\left(e^{-t/\tau_A}-e^{-t/\tau_B}\right)
-	\end{equation}
-\\\indent The above algorithm was used, in conjunction with the analytic solution (see Appendix A.) to test the accuracy of the iteration method and explore uncertainty in age of the observed object.
-\\ \indent No use of generative AI was used in this assignment.
-
-	\begin{figure}[h]
-		\includegraphics[width=0.39\textwidth]{fig2.png}
+	\end{equation}\vspace{-1mm}
+\\\indent The above algorithm was used, in conjunction with the analytic solution (see Appendix A.) to test the accuracy of the iteration method and explore uncertainty in age of the observed object. No use of generative AI was used in this assignment.
+	\begin{figure}[H]
+		\includegraphics[width=0.39\textwidth]{fig3.png}
 		\label{fig:fig1}
 		\caption{Ratio of nuclei types over time for different $\gamma$ values\\(a) $\gamma>1$,~~(b) $\gamma<1$,~~(c) $\gamma=1$}
 	\end{figure}
 		\section{Results}
 		Different decay ratios $\gamma = \tau_A/\tau/B$ were tested. Exponential bounded growth was observed with $\gamma>1$, unbounded growth with $\gamma<1$, and linear growth with $\gamma = 1$. 
-		\\ \indent The ratios $r$ and analytic solutions are plotted against corresponding scaled times $T$, shown in Figure~1.
+		\\ \indent The ratios $r$ and analytic solutions are plotted against corresponding scaled times $T$, shown in Figure~1.\vspace{-1mm}
 	\section{Discussion}
-	Euler's method proved consistent and in agreement with the analytic solution when $\gamma\ge 1$. The version of Euler's method used exponentially grew faster than the analytic solution's exponential growth, with more disagreement as $\gamma\rightarrow 0+$. 
+	Euler's method proved consistent and in agreement with the analytic solution when for all $\gamma>0$.
 	\\ \indent With $\gamma \ge 1$, shown in Figures (a) and (c), the age of the object can be accurately predicted for low scaled time $T$. Euler's method proved reliable for approximating the behavior of nuclei decay, with fractional differences less than 1\%, decreasing as $\gamma\rightarrow\infty$.
-	\\ \indent However, by the behavior of the decay shows unreliable age prediction as age increases. The bounded exponential growth shows little change in the ratio $N_B/N_A$ despite large changes in scaled time. With the error of Euler's method, though small, the predicted age cannot be precisely picked out among nearly identical results. 
-	\\ \indent Shown in Figure 1.b, with $\gamma=0.40,0.45,0.50$, at scaled times $T=10$, the numeric solutions disagree with the exact solutions by 32.6\%, 23.7\%, and 17.6\% respectively. The age can be determined somewhat accurately at early ages. Though the exponential growth explodes, Euler's Method in agreement with the exact solution at first, but quickly diverges as scaled time increases. 
+	\\ \indent However, by the behavior in Figure 1(a) shows unreliable age prediction as age increases. The bounded exponential growth shows little change in the ratio $N_B/N_A$ despite large changes in scaled time. The predicted age cannot be precisely picked out among nearly identical results. 
+	\\ \indent Shown in Figure 1.b, the age can be determined somewhat accurately at early ages. Though the exponential growth explodes, Euler's method is in agreement with the exact solution at all times. 
 	\\ \indent On the other hand, a ratio of exactly $\gamma=1$ showed consistently acceptable predictions. With a maximum error of 1\%, and perfectly linear behavior, every value of scaled time $T$ has a unique, corresponding ratio. Neither the exact solution nor the approximation out-grow the other.
+	\\ \indent It was found that large time steps $\Delta t$ greatly increased the fractional difference between predicted and observed results. For example, the exponential growth shown when $\gamma < 1$ had large dissagreement when $\Delta t=0.1$, with average error being $17\%-32\%$. However, reducing the time step to $\Delta t =0.01$ reduced the error range down to $1.6\%-2.2\%$. With proper precautions, Euler's method can be reliably used to follow the analytic solution of this decay pattern. \vspace{-1mm}
 	\section{Summary}
-	Euler's Method proved to be somewhat reliable in predicting the age of an object based on the ratio of $N_A$ and $N_B$ type nuclei within it. The time constant ratio $\gamma$ determined the decay behavior, which in turn provided varying results on age prediction accuracy. For ratios $\gamma \ge 1$, Euler's method consistently agreed with the analytic solution. 
+	Euler's Method proved to be very reliable in predicting the age of an object based on the ratio of $N_A$ and $N_B$ type nuclei within it. The time constant ratio $\gamma$ determined the decay behavior, which in turn provided varying results on age prediction accuracy. 
+	\pagebreak
+		\section*{Derivation of Analytical Solution}
+	We start with the coupled differential equations:
+	\[\frac{dN_A}{dt}=-\frac{N_A}{\tau_A}\]
+	\[\frac{dN_B}{dt}=\frac{N_A}{\tau_A}-\frac{N_B}{\tau_B}\]
+	The first can be easily seen:
+	\[N_A'(t)=\frac{-1}{\tau_A}N_A(t)\rightarrow \boxed{N_A(t)=e^{-t/\tau_A}}\]
+	For our case, the initial value is simply 1.
+	\\ This result is then used for $N_B$:
+	\[N_B'(t)=\frac{N_A(t)}{\tau_A}-\frac{N_B(t)}{\tau_B}\]
+	\[N_B'(t)+\frac{N_B(t)}{\tau_B}=\frac{1}{\tau_A}e^{-t/\tau_A}\]
+	We find the integrating factor:
+	\[e^{\int{dt/\tau_B}}=e^{t/\tau_B}\]
+	Multiply the ODE by this integrating factor:
+	\[e^{t/\tau_B}N_B'(t)+\frac{1}{\tau_B}E^{t/\tau_B}N_B(t)=\frac{1}{\tau_A}e^{t/\tau_B-t/\tau_A}\]
+	Recognize the chain rule:
+	\[\frac{d}{dt}\left[e^{t/\tau_B}N_B(t)\right]=\frac{1}{\tau_A}e^{t/\tau_B-t/\tau_A}\]
+	Integrate both sides:
+	\[\int\frac{d}{dt}\left[e^{t/\tau_B}N_B(t)\right]dt=\int\frac{1}{\tau_A}e^{t/\tau_B-t/\tau_A}\]
+	\[e^{t/\tau_B}B(t)=\dfrac{1/\tau_A}{1/\tau_B-1/\tau_A}\left[e^{t/\tau_B-t/\tau_A}-1\right]\]
+	\[\boxed{B(t)=\dfrac{\tau_B}{\tau_A-\tau_B}\left(e^{-t/\tau_A}-e^{-t/\tau_B}\right)}\]
 \end{document}
