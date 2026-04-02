@@ -15,11 +15,15 @@
 \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
 \usepackage{gensymb}
 \usepackage{tabularx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
 
 \title{Computational HW 1}
+
 \author{Michael Bibbs}
 \begin{document}
-		\maketitle
+\maketitle
 		\section*{Radioactive Decay}
 		\section{Introduction}
 		Consider a radioactive decay problem involving two types of nuclei, $A$ and $B$, with populations $N_A(t)$ and $N_B(t)$. Suppose that type $A$ nuclei decay to form type $B$ nuclei, which then also decay, according to the differential equations
@@ -29,25 +33,75 @@
 		\begin{equation}
 			\frac{dN_B}{dt}=\frac{N_A}{\tau_A}-\frac{N_B}{\tau_B}
 		\end{equation}
-		Here, we assume that type A nuclei are naturally occurring, and type B are not. This paper focuses on determing the age of an object by measuring the amount of type A and B nuclei within the object. We then discuss the accuracy of the age based on the ratio of measured nuclei $\dfrac{N_B}{N_A}$
+		\\\indent Here, we assume that type A nuclei are naturally occurring, and type B are not. This paper focuses on determing the age of an object by measuring the amount of type A and B nuclei within the object. We then discuss the accuracy of the age based on the ratio of measured nuclei $N_B / N_A$
 		\section{Methods}
-		The original Euler method is used. The form
+		\indent The original Euler method is used. The form
 		\[f(t+\Delta t)=f(t)+\frac{df}{dt}(t)\Delta t\]
 		\indent is adapted into our coupled differential equations. We obtain the iteration relations
 		\begin{equation}
-			N_A(t+\Delta t) = N_B(t) -\frac{N_A(t)}{\tau_A}\Delta t
+			N_A(t+\Delta t) = N_A(t) -\frac{N_A(t)}{\tau_A}\Delta t
 		\end{equation}
 		\begin{equation}
-			N_B(t+\Delta t) = N_B(t)
-		\end{equation}
-		The following parameters were initialized as such:
+			N_B(t+\Delta t) = N_B(t)+\left(\frac{N_A(t)}{\tau_A}-\frac{N_B(t)}{\tau_B}\right)\Delta t
+		\end{equation}\\
+		\indent The following parameters were initialized as such:
 		\begin{enumerate}
-			\item $N_A(0) = 1$~~~{\textit{\footnotesize (Note: this represents 100\% of the starting nuclei being type A.)}}
-			\item $N_B(0) = 0$
-			\item $\Delta t=0.1$
+			\item Initial Type A nuclei $N_A(0) = 1$~~~{\textit{\footnotesize (Note: this represents 100\% of the starting nuclei being type A.)}}
+			\item Initial Type B nuclei $N_B(0) = 0$
 			\item Type A Decay Constant $\tau_A$
 			\item Type B Decay Constant $\tau_B$ 
+			\item Nuclei ratio $r=N_B/N_A$
 			\item Scaled time $T = t/\tau_A$
 		\end{enumerate}
-		Different decay ratios $\gamma = \tau_A/\tau/B$ were tested. 
+
+	\begin{minipage}{0.7\linewidth}
+		\rule{\linewidth}{0.5pt}
+		\refstepcounter{algorithm} % increments counter properly
+		\textbf{Algorithm 1} Euler's Method
+		
+		\vspace{-0.5em}
+		\rule{\linewidth}{0.5pt}
+		
+		\begin{algorithmic}
+			\Require $t>0$
+			\State $N_A \gets [1]$ \Comment{Initial Value}
+			\State $N_B \gets [0]$ \Comment{Initial Value}
+			\While{$t<t_{MAX}$}
+			\State append $N_A(t)  -\frac{N_A(t)}{\tau_A}\Delta t$ to $N_A$
+			\State append $N_B(t) +\left(\frac{N_A(t)}{\tau_A}-\frac{N_B(t)}{\tau_B}\right) \Delta t$
+			\State $t \gets t + \Delta t$
+			\EndWhile
+			\State $r \gets N_B/N_A$\Comment{Element-Wise Division}
+			\State \Return $r$
+		\end{algorithmic}
+		
+		\rule{\linewidth}{0.5pt}
+		\vspace{0.25mm}
+	\end{minipage}
+	\\The analytic solutions for the coupled differential equations (1),(2) are:
+	\begin{equation}
+	N_A(t)=e^{-t/\tau_A}
+	\end{equation}
+	\begin{equation}
+	N_B(t)=\dfrac{\tau_B}{\tau_A-\tau_B}\left(e^{-t/\tau_A}-e^{-t/\tau_B}\right)
+	\end{equation}
+\\\indent The above algorithm was used, in conjunction with the analytic solution (see Appendix A.) to test the accuracy of the iteration method and explore uncertainty in age of the observed object.
+\\ \indent No use of generative AI was used in this assignment.
+
+	\begin{figure}[h]
+		\includegraphics[width=0.39\textwidth]{fig2.png}
+		\label{fig:fig1}
+		\caption{Ratio of nuclei types over time for different $\gamma$ values\\(a) $\gamma>1$,~~(b) $\gamma<1$,~~(c) $\gamma=1$}
+	\end{figure}
+		\section{Results}
+		Different decay ratios $\gamma = \tau_A/\tau/B$ were tested. Exponential bounded growth was observed with $\gamma>1$, unbounded growth with $\gamma<1$, and linear growth with $\gamma = 1$. 
+		\\ \indent The ratios $r$ and analytic solutions are plotted against corresponding scaled times $T$, shown in Figure~1.
+	\section{Discussion}
+	Euler's method proved consistent and in agreement with the analytic solution when $\gamma\ge 1$. The version of Euler's method used exponentially grew faster than the analytic solution's exponential growth, with more disagreement as $\gamma\rightarrow 0+$. 
+	\\ \indent With $\gamma \ge 1$, shown in Figures (a) and (c), the age of the object can be accurately predicted for low scaled time $T$. Euler's method proved reliable for approximating the behavior of nuclei decay, with fractional differences less than 1\%, decreasing as $\gamma\rightarrow\infty$.
+	\\ \indent However, by the behavior of the decay shows unreliable age prediction as age increases. The bounded exponential growth shows little change in the ratio $N_B/N_A$ despite large changes in scaled time. With the error of Euler's method, though small, the predicted age cannot be precisely picked out among nearly identical results. 
+	\\ \indent Shown in Figure 1.b, with $\gamma=0.40,0.45,0.50$, at scaled times $T=10$, the numeric solutions disagree with the exact solutions by 32.6\%, 23.7\%, and 17.6\% respectively. The age can be determined somewhat accurately at early ages. Though the exponential growth explodes, Euler's Method in agreement with the exact solution at first, but quickly diverges as scaled time increases. 
+	\\ \indent On the other hand, a ratio of exactly $\gamma=1$ showed consistently acceptable predictions. With a maximum error of 1\%, and perfectly linear behavior, every value of scaled time $T$ has a unique, corresponding ratio. Neither the exact solution nor the approximation out-grow the other.
+	\section{Summary}
+	Euler's Method proved to be somewhat reliable in predicting the age of an object based on the ratio of $N_A$ and $N_B$ type nuclei within it. The time constant ratio $\gamma$ determined the decay behavior, which in turn provided varying results on age prediction accuracy. For ratios $\gamma \ge 1$, Euler's method consistently agreed with the analytic solution. 
 \end{document}
