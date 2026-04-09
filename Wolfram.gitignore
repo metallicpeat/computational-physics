@@ -1,0 +1,45 @@
+# --- Mathematica Frontend & Notebooks ---
+# Backup files created by the frontend
+*.nb~
+*.nb_bak
+
+# FrontEnd state and cache (often contains local path info)
+.Mathematica/
+FrontEnd/
+FrontEndState.cache
+
+# --- Wolfram Language Packages & Build Artifacts ---
+# Compiled C code or binaries if using CCompilerDriver
+bin/
+lib/
+*.exe
+*.o
+*.so
+*.dll
+*.dylib
+
+# Caches and temporary directories
+.wolfram/
+.cache/
+PACLET_CACHE/
+
+# --- Kernel & Documentation ---
+# Local documentation build artifacts
+Documentation/English/Index/
+Documentation/English/SearchIndex/
+
+# --- Local Environment & User Settings ---
+# Private configuration files (e.g., API keys, local paths)
+init.local.m
+config.local.wl
+private.wl
+
+# --- Common IDE/Editor Files ---
+# If using Wolfram Workbench (Eclipse-based)
+.project
+.classpath
+.settings/
+
+# General OS junk
+.DS_Store
+Thumbs.db
