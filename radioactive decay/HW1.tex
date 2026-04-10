@@ -57,7 +57,7 @@
 	
 	\begin{minipage}{0.7\linewidth}
 		\rule{\linewidth}{0.5pt}
-		\refstepcounter{algorithm} % increments counter properly
+		\refstepcounter{algorithm} 
 		\textbf{Algorithm 1} Euler's Method
 		
 		\vspace{-0.5em}
@@ -106,12 +106,6 @@
 	\\ \indent with a decay constant ratio $\gamma=1$, there is little uncertainty in the age, as the decay ratio follows a perfectly linear line. This uncertainty is constant as the age increases due to this linear relationship. 
 	\\\\ Euler's method showed consistent agreement with the analytical solution. Shown in Figure 1.b, the method used shows agreement with the exact solution for $\gamma>1$. Euler's method consistently over-estimated the numerical solution. 
 	\\ \indent With low decay constants $\gamma<1$, this over-shooting grew as age increased, causing larger discrepancies between Euler's method and the analytic solution. 
-	
-%	\\ \indent With $\gamma \ge 1$, shown in Figures (a) and (c), the age of the object can be accurately predicted for low scaled time $T$. Euler's method proved reliable for approximating the behavior of nuclei decay, with fractional differences less than 1\%, decreasing as $\gamma\rightarrow\infty$.
-%	\\ \indent However, by the behavior in Figure 1(a) shows unreliable age prediction as age increases. The bounded exponential growth shows little change in the ratio $N_B/N_A$ despite large changes in scaled time. The predicted age cannot be precisely picked out among nearly identical results. 
-%	\\ \indent Shown in Figure 1.b, the age can be determined somewhat accurately at early ages. Though the exponential growth explodes, Euler's method is in agreement with the exact solution at all times. 
-%	\\ \indent On the other hand, a ratio of exactly $\gamma=1$ showed consistently acceptable predictions. With a maximum error of 1\%, and perfectly linear behavior, every value of scaled time $T$ has a unique, corresponding ratio. Neither the exact solution nor the approximation out-grow the other.
-%	\\ \indent It was found that large time steps $\Delta t$ greatly increased the fractional difference between predicted and observed results. For example, the exponential growth shown when $\gamma < 1$ had large dissagreement when $\Delta t=0.1$, with average error being $17\%-32\%$. However, reducing the time step to $\Delta t =0.01$ reduced the error range down to $1.6\%-2.2\%$. With proper precautions, Euler's method can be reliably used to follow the analytic solution of this decay pattern. \vspace{-1mm}
 	\section{Summary}
 	Euler's Method proved to be very reliable in predicting the age of an object based on the ratio of $N_A$ and $N_B$ type nuclei within it. The time constant ratio $\gamma$ determined the decay behavior, which in turn provided varying results on age prediction accuracy. 
 	\pagebreak
