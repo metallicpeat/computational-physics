@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[letterpaper, twocolumn, columnsep=1cm,margin=1.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage{float}
+\usepackage{blindtext}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{xcolor}
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\usepackage{gensymb}
+\usepackage{tabularx}
+\renewcommand\thesection{\Roman{section}}
+\renewcommand\thesubsection{\indent\small\Alph{subsection}}
+
+
+\title{Computational HW 2}
+\author{Michael Bibbs}
+
+\begin{document}
+	\maketitle
+	\section*{Realistic Projectile Motion}
+	\section{Introduction}
+	Consider two identical objects that start at the same height above the ground. One object is dropped, and the other is launched horizontally. Including air resistance, we quantify which object hits the ground first. This paper explores the dependence of landing time difference on the parameters mass, starting height, and launch velocity.
+	\section{Methods}
+	Without drag, the equations of motion for a projectile can be modeled as four differential equations:
+	\[\frac{dx}{dt} = v, \qquad \frac{dv_{x}}{dt} = 0\]
+	\[\frac{dy}{dt} = v, \qquad \frac{dv_{y}}{dt} = -g\]
+	However, factoring in drag, we have two components to consider:
+			\[F_{D,y} = \frac{v_{y}}{v} F_{D} \to -v_{y}vB_{2}\]
+			\[F_{D,x} = \frac{v_{x}}{v} F_{D} \to -v_{x}vB_{2}\]
+	These forces then act and update the $x$ and $y$ velocities, \\
+	giving rise to four equations of motion in Euler's method: 
+	\begin{eqnarray}
+		x_{i+1}=x_i+v_{x,i}\Delta t\\
+		v_{x,i+1} = v_{x,i}-\frac{B_2}{m}v_iv_{x,i}\Delta t\\
+		y_{i+1}=y_i+v_{y,i}\Delta t\\
+		v_{y,i+1}=v_{y,i}-\left(g+\frac{B_2}{m}v_iv_{y,i}\right)\Delta t
+	\end{eqnarray}
+	\section{Results}
+	
+	\section{Conclusion}
+
+	
+	
+	
+	
+\end{document}
