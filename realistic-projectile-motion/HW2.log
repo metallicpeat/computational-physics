@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.22)  17 APR 2026 09:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.22)  20 APR 2026 08:44
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -414,45 +414,103 @@ Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \TX@cols=\count312
 \TX@ftn=\toks27
 )
+(c:/texlive/2023/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(c:/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks28
+\c@algorithm=\count313
+)
+(c:/texlive/2023/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(c:/texlive/2023/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count314
+\c@ALG@rem=\count315
+\c@ALG@nested=\count316
+\ALG@tlm=\skip60
+\ALG@thistlm=\skip61
+\c@ALG@Lnr=\count317
+\c@ALG@blocknr=\count318
+\c@ALG@storecount=\count319
+\c@ALG@tmpcounter=\count320
+\ALG@tmplength=\skip62
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (c:/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
+
+(c:/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+
+(c:/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen184
+\captionmargin=\dimen185
+\caption@leftmargin=\dimen186
+\caption@rightmargin=\dimen187
+\caption@width=\dimen188
+\caption@indent=\dimen189
+\caption@parindent=\dimen190
+\caption@hangindent=\dimen191
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count321
+\c@continuedfloat=\count322
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: wrapfig package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 239.
+\c@subfigure=\count323
+Package caption Info: New subtype `subtable' on input line 239.
+\c@subtable=\count324
+)
 (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count313
+\l__color_backend_stack_int=\count325
 \l__pdf_internal_box=\box59
 )
 (./HW2.aux)
 \openout1 = `HW2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
  (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count314
-\scratchdimen=\dimen184
+\scratchcounter=\count326
+\scratchdimen=\dimen192
 \scratchbox=\box60
-\nofMPsegments=\count315
-\nofMParguments=\count316
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count317
-\MPscratchDim=\dimen185
-\MPnumerator=\count318
-\makeMPintoPDFobject=\count319
-\everyMPtoPDFconversion=\toks29
+\nofMPsegments=\count327
+\nofMParguments=\count328
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count329
+\MPscratchDim=\dimen193
+\MPnumerator=\count330
+\makeMPintoPDFobject=\count331
+\everyMPtoPDFconversion=\toks30
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -462,7 +520,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 26.
+Package hyperref Info: Link coloring ON on input line 29.
  (./HW2.out) (./HW2.out)
 \@outlinefile=\write3
 \openout3 = `HW2.out'.
@@ -502,51 +560,116 @@ Package hyperref Info: Link coloring ON on input line 26.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \celsius on input line 26.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 26.
+LaTeX Info: Redefining \celsius on input line 29.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 29.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 26.
-Package gensymb Info: Using \Omega for \ohm on input line 26.
+LaTeX Info: Redefining \ohm on input line 29.
+Package gensymb Info: Using \Omega for \ohm on input line 29.
 
 Package gensymb Warning: Not defining \micro.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 
-Overfull \hbox (1.98059pt too wide) in paragraph at lines 30--31
+Overfull \hbox (1.98059pt too wide) in paragraph at lines 33--35
 \OT1/cmr/m/n/10 Consider two iden-ti-cal ob-jects that start at the same height
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--104
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--104
+
+ []
+
+<height.png, id=28, 388.0899pt x 268.1217pt>
+File: height.png Graphic file (type png)
+<use height.png>
+Package pdftex.def Info: height.png  used on input line 120.
+(pdftex.def)             Requested size: 264.46837pt x 182.72537pt.
+<mass.png, id=30, 388.0899pt x 268.1217pt>
+File: mass.png Graphic file (type png)
+<use mass.png>
+Package pdftex.def Info: mass.png  used on input line 124.
+(pdftex.def)             Requested size: 264.46837pt x 182.72537pt.
+<velocity.png, id=31, 377.9721pt x 268.1217pt>
+File: velocity.png Graphic file (type png)
+<use velocity.png>
+Package pdftex.def Info: velocity.png  used on input line 128.
+(pdftex.def)             Requested size: 264.46837pt x 187.60617pt.
+
+Overfull \hbox (14.22636pt too wide) in paragraph at lines 119--131
+ [][] 
+ []
+
+
+Overfull \hbox (14.22636pt too wide) in paragraph at lines 119--131
+ [] 
+ []
+
+
+Overfull \hbox (14.22636pt too wide) in paragraph at lines 119--131
+ [] 
+ []
+
 [1
 
-{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+{c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-] (./HW2.aux)
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 135.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 135.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 135.
+
+[2 <./height.png> <./mass.png> <./velocity.png>] (./HW2.aux)
 Package rerunfilecheck Info: File `HW2.out' has not changed.
-(rerunfilecheck)             Checksum: 85B7A08761B57A526D6013CABB45415E;352.
+(rerunfilecheck)             Checksum: 1E7CD069642F9A025352104A97A7377F;593.
  ) 
 Here is how much of TeX's memory you used:
- 12321 strings out of 476097
- 195580 string characters out of 5795135
- 1864845 words of memory out of 5000000
- 32541 multiletter control sequences out of 15000+600000
- 517055 words of font info for 49 fonts, out of 8000000 for 9000
+ 14414 strings out of 476097
+ 234230 string characters out of 5795135
+ 1887845 words of memory out of 5000000
+ 34590 multiletter control sequences out of 15000+600000
+ 519115 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,76p,369b,449s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
-live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
-fb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on HW2.pdf (1 page, 99431 bytes).
+ 75i,11n,77p,995b,553s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
+live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2023/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/
+texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/20
+23/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2023/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb>
+Output written on HW2.pdf (2 pages, 235756 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
- 8 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 145 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
+ 64 words of extra memory for PDF output out of 10000 (max. 10000000)
 
